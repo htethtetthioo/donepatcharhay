@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var inc = 0;
+        var myVar = null;
+		
+		function htethtet(){
+		//setInverval(do,timerinterval)
+			window.myVar = setInterval(function(){
+				window.inc += 10;
+
+				document.getElementById("hhko").style.marginLeft = window.inc + "px";
+
+				console.log(window.inc);
+			}, 1000);
+		}
+         
+		function stophtethtet(){
+			clearInterval(window.myVar);
+			window.inc = 0;
+			document.getElementById("hhko").style.marginLeft = window.inc + "px";
+		}
+
+    </script>
+    <style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th {
+			padding: 10px;
+		}
+		th {
+			text-align: min-width;
+		}
+    </style>
+</head>
+<body>
+
+<h2 id="hhko">IT Team</h2>
+<p>To list IT team member.</p>
+<button onclick="htethtet()">CLiCK ME</button>
+<button onclick="stophtethtet()">Stop ME</button>
+<table style="width:100%">
+  <tr>
+    
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+    <th>Position</th>
+    <th>Department</th>
+  </tr>
+  <tr>
+    <td>Myat</td>
+    <td>Min <img src="https://media.4rgos.it/i/Argos/9164291_R_Z001A?w=150&h=88&qlt=20"alt="laptop"></td>
+    <td>40</td>
+    <td>HOD</td>
+    <td>IT</td>
+  </tr>
+  <tr>
+      <style>tr, td {padding: 20px}</style>
+    <td>Coe Maw</td>
+    <td>Nyi Zaw</td>
+    <td colspan="2">40, Manager</td>
+    <td>IT</td>
+  </tr>
+  <tr>
+    <td>Wai Yan</td>
+    <td>Linn</td>
+    <td>33</td>
+    <td>System Architect</td>
+    <td>IT</td>
+  </tr>
+</table>
+
+</body>
+</html>
